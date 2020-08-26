@@ -23,7 +23,7 @@
 - has_many :users, through: :groups_users
 
 
-## messagessテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string||

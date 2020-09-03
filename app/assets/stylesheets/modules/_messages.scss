@@ -1,3 +1,7 @@
+$mainFontSize: 16px;
+$mainWhiteColor: #ffffff;
+
+
 * {
   box-sizing: border-box;
 }
@@ -26,8 +30,8 @@
       font-weight: bold; 
 
       &__user-name{
-        font-size: 16px;
-        color: #ffffff;
+        font-size: $mainFontSize;
+        color: $mainWhiteColor;
       }
       &__menu{
         width: 60px;
@@ -36,7 +40,7 @@
         justify-content: flex-end;
         align-items: center;
         .Contents__btn{
-          color: #ffffff;
+          color: $mainWhiteColor;
           margin-right: 5px;
           text-decoration: none;
         }
@@ -52,11 +56,11 @@
       height: 65px;
       width: 300px;
       margin-left: 20px;
-      color: #ffffff;
+      color: $mainWhiteColor;
       
       &__name{
         font-size: 15px;
-        margin-top: 20px;
+        padding-top: 20px;
         margin-bottom: 5px;
         font-weight: bold;
       }
@@ -75,7 +79,7 @@
     height: 100px;
     width:100%;
     padding: 0 40px;
-    background-color: #ffffff;
+    background-color: $mainWhiteColor;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
@@ -105,7 +109,7 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
-      font-size: 16px;
+      font-size: $mainFontSize;
       text-decoration: none;
     }
   }
@@ -124,7 +128,7 @@
         display: flex;
         &__messages-info-name{
           color: #333333;
-          font-size: 16px;
+          font-size: $mainFontSize;
           font-weight: bold;
         }
         &__messages-info-date{
@@ -152,7 +156,7 @@
       &__input-text{
         height: 50px;
         width: 100%;
-        background-color: #ffffff;
+        background-color: $mainWhiteColor;
         border: none;
         line-height: 50px;
         position: relative;
@@ -179,7 +183,7 @@
         padding: 0 30px;
         margin-left: 15px;
         background-color: #38aef0;
-        font-size: 16px;
+        font-size: $mainFontSize;
         color: #fff;
         line-height: 50px;
       }

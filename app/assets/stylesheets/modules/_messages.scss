@@ -51,21 +51,28 @@ $mainWhiteColor: #ffffff;
   &__groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+
+    a{
+      text-decoration: none;
+    }
     
     &__groups-box {
       height: 65px;
       width: 300px;
       margin-left: 20px;
       color: $mainWhiteColor;
+      text-decoration: none;
       
       &__name{
         font-size: 15px;
         padding-top: 20px;
         margin-bottom: 5px;
         font-weight: bold;
+        color: $mainWhiteColor;
       }
       &__messages{
         font-size: 11px;
+        color: $mainWhiteColor;
       }
     }
   }

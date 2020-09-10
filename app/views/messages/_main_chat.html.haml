@@ -2,30 +2,25 @@
   .main-chat__main-header
     .main-chat__main-header__groups
       .main-chat__main-header__groups-name
-        test
+        = @group.name
       %ul.member-list
         Member :
         %li.member
-          masa
-    = link_to "#",  class: "main-chat__main-header__menu" do
+          - @group.users.each do |user|
+            = user.name
+    = link_to edit_group_path(@group) ,  class: "main-chat__main-header__menu" do
       Edit
   .main-chat__messages
-    .main-chat__messages__messages-box
-      .main-chat__messages__messages-box__messages-info
-        .main-chat__messages__messages-box__messages-info__messages-info-name
-          masa
-        .main-chat__messages__messages-box__messages-info__messages-info-date
-          2020年09月01日 17時24分
-      %p.main-chat__messages__messages-box__messages-content
-        おはよう !
+    = render @messages
+
   .main-chat__form
-    %form.main-chat__form__new-messages
+    = form_with model: [@group, @message], html: {class: "main-chat__form__new-messages"}, local: true do |f|
       .main-chat__form__new-messages__input-text
-        %input{type: "text", placeholder:"type a message", class:"input-content"}
-        %label{class: "content"}
+        = f.text_field :content, class: 'input-content', placeholder: 'type a message'
+        = f.label :image, class: 'content' do
           = icon('far','image form')
-          %input{type: "file", class: "content-hidden",}
-      %input{type: "submit", value:"Send", class:"main-chat__form__new-messages__submit-btn"}
+          = f.file_field :image, class: 'content-hidden'
+      = f.submit 'Send', class: 'main-chat__form__new-messages__submit-btn'
 
       
       
